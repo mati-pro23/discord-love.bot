@@ -7,7 +7,7 @@ const client = new Client({
   ]
 });
 
-const TOKEN = "MTUwOTk4NTAxNzMxOTkxNTU3MQ.G9ruWb.i5z_QeoR-882bPcpoTb_2oRRbAKQEdZ70wjfRI";
+const TOKEN = "MTUwOTk4NTAxNzMxOTkxNTU3MQ.G__Pmn.oxky93s8xEoGBxJal3sLErIYxIaTMl3XFVcavI";
 const CHANNEL_ID = "1446531671179526155";
 
 function randomMember(guild) {
@@ -30,5 +30,6 @@ client.once("ready", async () => {
     channel.send(`💖 ${user} got some love!`);
   }, 2 * 60 * 60 * 1000);
 });
-
+const http = require('http');
+http.createServer((req, res) => res.end('ok')).listen(process.env.PORT || 3000);
 client.login(TOKEN);
