@@ -7,8 +7,8 @@ const client = new Client({
   ]
 });
 
-const TOKEN = "MTUwOTk4NTAxNzMxOTkxNTU3MQ.G__Pmn.oxky93s8xEoGBxJal3sLErIYxIaTMl3XFVcavI";
-const CHANNEL_ID = "1446531671179526155";
+const TOKEN = process.env.TOKEN;
+const CHANNEL_ID = process.env.CHANNEL_ID;
 
 function randomMember(guild) {
   const members = guild.members.cache.filter(m => !m.user.bot);
