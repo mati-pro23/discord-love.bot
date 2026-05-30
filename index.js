@@ -20,7 +20,7 @@ client.once("ready", async () => {
 
 setInterval(async () => {
   const now = new Date();
-  if (now.getHours() === 17 && now.getMinutes() === 0) {
+  if (now.getHours() === 19 && now.getMinutes() < 2) {
     const guild = client.guilds.cache.first();
     await guild.members.fetch();
     const user = randomMember(guild);
