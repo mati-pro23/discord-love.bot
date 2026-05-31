@@ -19,16 +19,13 @@ client.once("ready", async () => {
   console.log("💖 Bot online");
 
 setInterval(async () => {
-  const now = new Date();
-  if (now.getHours() === 15 && now.getMinutes() < 2) {
-    const guild = client.guilds.cache.first();
-    await guild.members.fetch();
-    const user = randomMember(guild);
-    const channel = guild.channels.cache.get(CHANNEL_ID);
-    if (!channel) return;
-    channel.send(`💖 ${user} got some love!`);
-  }
-}, 60 * 1000);
+  const guild = client.guilds.cache.first();
+  await guild.members.fetch();
+  const user = randomMember(guild);
+  const channel = guild.channels.cache.get(CHANNEL_ID);
+  if (!channel) return;
+  channel.send(`💖 ${user} got some love!`);
+}, 2 * 60 * 60 * 1000);
 });
 const http = require('http');
 http.createServer((req, res) => res.end('ok')).listen(process.env.PORT || 3000);
