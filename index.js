@@ -25,7 +25,7 @@ setInterval(async () => {
   const channel = guild.channels.cache.get(CHANNEL_ID);
   if (!channel) return;
   channel.send(`💖 ${user} got some love!`);
-}, 2 * 60 * 60 * 1000);
+}, 24 * 60 * 60 * 1000);
 });
 const http = require('http');
 http.createServer((req, res) => res.end('ok')).listen(process.env.PORT || 3000);
